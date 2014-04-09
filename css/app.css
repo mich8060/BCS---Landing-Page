@@ -1,0 +1,148 @@
+/* Mimic Backcountry Styles */
+@font-face{font-family:"ConduitItc";font-style:normal;font-weight:normal;src:url('http://www.backcountry.com/fonts/conduititc-light-webfont.eot?#iefix');src:url('http://www.backcountry.com/fonts/conduititc-light-webfont.eot?#iefix') format("eot"),url('http://www.backcountry.com/fonts/conduititc-light-webfont.woff') format("woff"),url('http://www.backcountry.com/fonts/conduititc-light-webfont.ttf') format("truetype"),url('http://www.backcountry.com/fonts/conduititc-light-webfont.svg#conduititc-light-webfont') format("svg")}
+@font-face{font-family:"ConduitItc";font-style:italic;font-weight:normal;src:url('http://www.backcountry.com/fonts/conduititc-light-italic-webfont.eot?#iefix');src:url('http://www.backcountry.com/fonts/conduititc-light-italic-webfont.eot?#iefix') format("eot"),url('http://www.backcountry.com/fonts/conduititc-light-italic-webfont.woff') format("woff"),url('http://www.backcountry.com/fonts/conduititc-light-italic-webfont.ttf') format("truetype"),url('http://www.backcountry.com/fonts/conduititc-light-italic-webfont.svg#conduititc-light-italic-webfont') format("svg")}
+@font-face{font-family:"ConduitItc";font-style:normal;font-weight:bold;src:url('http://www.backcountry.com/fonts/conduititc-bold-webfont.eot?#iefix');src:url('http://www.backcountry.com/fonts/conduititc-bold-webfont.eot?#iefix') format("eot"),url('http://www.backcountry.com/fonts/conduititc-bold-webfont.woff') format("woff"),url('http://www.backcountry.com/fonts/conduititc-bold-webfont.ttf') format("truetype"),url('http://www.backcountry.com/fonts/conduititc-bold-webfont.svg#conduititc-bold-webfont') format("svg")}
+@font-face{font-family:"ConduitItc";font-style:normal;font-weight:900;src:url('http://www.backcountry.com/fonts/conduititc-extrabold-webfont.eot?#iefix');src:url('http://www.backcountry.com/fonts/conduititc-extrabold-webfont.eot?#iefix') format("eot"),url('http://www.backcountry.com/fonts/conduititc-extrabold-webfont.woff') format("woff"),url('http://www.backcountry.com/fonts/conduititc-extrabold-webfont.ttf') format("truetype"),url('http://www.backcountry.com/fonts/conduititc-extrabold-webfont.svg#conduititc-extrabold-webfont') format("svg")}
+
+body { margin:0; padding:0; height:2000px; }
+
+/* Begin Landing Page Styles */
+.bcs-app { background:#fff; color:#222; font:normal 18px/20px "ConduitItc", Helvetica, Arial, Sans-Serif; position:relative; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; text-size-adjust:100%; }
+
+/* Generic Browser Fixes */
+	.bcs-app a { color:#39C; text-decoration:none; }
+	.bcs-app p { margin:10px 0; }
+	img { display:block; width:100%; }
+	ul, li { margin:0; padding:0; list-style-type:none; }
+	
+/* App Unique Typography */
+	.bcs-lead-1 { font-size:48px; line-height:48px; font-weight:900; letter-spacing:-0.02em; text-transform:uppercase; }
+	.bcs-lead-2 { font-size:24px; line-height:20px; letter-spacing:-0.03em; }
+	.bcs-lead-3 { font-size:24px; line-height:20px; font-weight:900; }
+	@media only screen and (min-width: 0px) and (max-width: 600px) {
+		.bcs-lead-1 { font-size:36px; line-height:32px; }
+		.bcs-lead-2 { line-height:24px; }
+	}
+	
+/* Unique Page Inputs */
+	input:not([type="radio"]):not([type="checkbox"]){ border:none; -webkit-border-radius:0px; -moz-border-radius:0px; -o-border-radius:0px; border-radius:0px; font-family:"ConduitItc",Helvetica,Arial,Sans-Serif; margin:5px 0; outline:none; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-background-clip:padding-box; -moz-background-clip:padding-box; background-clip:padding-box; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; }
+		input[type="text"] { background:#fff; -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px; color:#222; font-size:20px; letter-spacing:-0.01em; padding:8px 10px; width:300px; }
+		input[type="submit"]{ background:#39C; color:#fff; font-size:20px; font-weight:bold; margin:5px 0; padding:8px 20px; cursor:pointer; }
+	@media only screen and (min-width: 0px) and (max-width: 600px) {
+		input[type="text"] { text-align:center; width:100%; }
+	}
+
+/* App Responsive Container */
+.bcs-app-container { margin:0 auto; min-width:1000px; max-width:1100px; position:relative; }
+	@media only screen and (min-width: 0px) and (max-width: 600px) { .bcs-app-container { min-width:320px; max-width:600px; } }
+	.bcs-app-container .bcs-app-column { float:left; display:inline; position:relative; }
+
+/* Clear fix via 960 grid */
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+	.clearfix:after{clear:both;content:'';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}
+	.clearfix{ display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; }
+	* html .clearfix{height:1%;}
+	.clearfix{display:block;}
+	
+/* Welcome Section Styles */
+	.bcs-app-bg { background:#222; height:600px; left:0px; overflow:hidden; position:absolute; right:0px; top:0px; z-index:0; }
+		.bcs-app-bg-fade{ opacity:0.5; background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,1)));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000',endColorstr='#000000',GradientType=0 );position:absolute;bottom:0px;right:0px;left:0px;height:200px;z-index:99;}
+		.bcs-app-bg-container { background:url(../img/backcountry-app-background.jpg) no-repeat center bottom; background-size:1680px 960px; height:960px; left:0px; position:absolute; right:0px; top:0px; }
+	.bcs-app-intro { color:#fff; height:600px; font-size:20px; line-height:24px; overflow:hidden; width:50%; z-index:99; }
+		.bcs-app-intro-container { }
+			a.bcs-app-button { background:#39C; color:#fff; display:inline-block; font-size:24px; font-weight:bold; line-height:45px; margin:10px 0; padding:0 20px; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-intro {  height:300px; font-size:16px; line-height:20px; width:100%; }
+		}
+
+	.bcs-app-device { width:50%; }
+		img.bcs-app-iphone-device { left:50%; margin:8px 0 0 -225px; position:absolute; width:450px; }
+		.bcs-app-iphone-video { background:#ccc; -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px; left:50%; height:450px; margin:0 0 0 -124px; overflow:hidden; position:absolute; top:152px; width:256px; }
+		.bcs-app-iphone-video img { height:453px; width:255px; }
+		.bcs-app-iphone-video video { height:453px; width:255px; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-device { width:100%; }
+			img.bcs-app-iphone-device { margin:8px auto 0; position:static; width:320px; }
+			.bcs-app-iphone-video { height:318px; margin:0 0 0 -88px; top:111px; width:182px; }
+			.bcs-app-iphone-video img { height:323px; position:absolute; width:182px; }
+		}
+		
+	.bcs-app-features { background:url(../img/backcountry-app-phone-basics.jpg) no-repeat center bottom; background-size:1800px 380px; height:600px; padding:50px 0 0 0; }
+		.bcs-app-feature-list { font-size:24px; text-align:center; width:100%; }
+			.bcs-app-feature-list-content { display:inline-block; margin:100px auto 0; text-align:center; }
+				.bcs-app-feature-list-content ul { line-height:16px; margin:25px 0; }
+				.bcs-app-feature-list-content li { clear:left; margin:0 0 20px 0; }
+			img.bcs-app-checkmark { display:inline-block; margin:0 8px 0 0; position:relative; top:1px; width:15px; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-features { background-size:720px 152px; border-top:solid 1px #ededed; height:auto; padding:20px 0 130px 0; text-align:center; }
+			.bcs-app-feature-list-content { margin:20px; }
+			.bcs-app-feature-list-content ul { margin:20px 40px; }
+			.bcs-app-feature-list-content li { font-size:18px; margin:20px auto;  }
+			img.bcs-app-checkmark { display:none; float:left; margin:0 5px 25px 0; top:3px; width:15px; }
+		}
+	
+	.bcs-app-featured { background:#222; color:#fff; clear:both; padding:80px 0 0 0; text-align:center; }
+		.bcs-app-featured-card { float:left; display:inline; position:relative; width:33.333% }
+			.bcs-app-card { margin:40px 10px 0 10px; }
+			.bcs-app-card-content { font-size:16px; padding:10px 40px 0 40px; }
+			.bcs-app-card-content .bcs-lead-3 { margin:20px 0; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) {
+			.bcs-app-featured { height:auto; overflow:hidden; padding:40px 0 450px 0; }	
+			.bcs-app-featured .bcs-lead-1 { margin:10px 40px; }
+			.bcs-app-featured-card { background:#222; position:absolute; right:0px; left:0px; margin:0 auto; width:320px; }
+			.bcs-app-card-content { font-size:14px; line-height:16px; }
+			.bcs-app-card-content .bcs-lead-3 { margin:10px 0; }
+			.bcs-app-card { margin:10px 10px 0 10px; }
+			.bcs-app-featured img:first-child { margin:0 auto; width:180px; }
+		}
+		
+	.bcs-app-gallery { padding:50px 0; text-align:center; }
+		.bcs-app-tabs { display:inline-block; font-size:20px; margin:20px auto; }
+			.bcs-app-tabs li { float:left; margin-left:-1px; padding:30px 0px; }
+			.bcs-app-tabs a { border:solid 1px #39C; display:block; padding:10px 0px; text-align:center; width:120px; }
+			.bcs-app-tabs .selected { background:#39C; color:#fff; }
+		.bcs-app-iphone-preview li { float:left; display:inline; position:relative; width:25%; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-iphone-preview { padding:5px; }
+			.bcs-app-iphone-preview li { width:50%; }
+		}
+		.bcs-app-ipad-preview { display:none; }
+		.bcs-app-ipad-preview li { float:left; display:inline; position:relative; width:33.333%; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-ipad-preview { padding:5px; }
+			.bcs-app-ipad-preview li { width:100%; }
+			.bcs-app-ipad-preview li div { margin:5px; }
+		}
+		
+	.bcs-app-optin { background:#222; background-size:1400px 600px;  color:#fff; padding:60px 0; overflow:hidden; position:relative; text-align:center; }
+		.bcs-app-optin form { margin:20px 0 30px 0; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-optin { padding:30px 0 0 0; }
+			.bcs-app-optin form { margin:10px 20px 30px 20px; }
+		}
+		
+	.bcs-app-social { float:right; margin:0 5px; position:relative;top:3px; width:100px; text-align:left; }
+	.bcs-social-overlay-container { display:inline-block; margin:0 auto; }
+		.bcs-social-overlay { background:#ededed; cursor:pointer; float:left; height:25px; margin:0 5px; overflow:hidden; padding:5px; position:relative; text-align:right; width:120px; }
+			.bcs-social-overlay:hover .bcs-overlay-graphic { top:35px; }
+		.bcs-overlay-graphic { background:#305c99 url(../img/backcountry-app-facebook.jpg) no-repeat left top; background-size:35px 35px; font-weight:bold; position:absolute; top:0px; padding:8px 8px 8px 50px; text-align:left; bottom:0px; right:0px; left:0px; z-index:9; transition:top 0.3s ease; -moz-transition:top 0.3s ease; -webkit-transition:top 0.3s ease; }
+			.bcs-google-overlay .bcs-overlay-graphic { background:#d24228 url(../img/backcountry-app-google.jpg) no-repeat left top; background-size:35px 35px; }
+			.bcs-twitter-overlay .bcs-overlay-graphic { background:#00cdff url(../img/backcountry-app-twitter.jpg) no-repeat left top; background-size:35px 35px; }
+	.bcs-app-form { padding:80px 0 0 50px;  }
+		.bcs-app-icon { margin:20px 0; width:60px; }
+		.bcs-app-form form { display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; float:left; margin:20px 0; }
+			.bcs-app-form form label { display:block; font-weight:bold; }
+			.bcs-app-form-error { background:#f00; background:rgba(255,0,0,0.8); color:#fff; display:none; font-weight:bold; left:0px; line-height:16px; padding:10px; position:fixed; right:0px; text-align:center; top:0px; z-index:99999999; }
+		.bcs-app-store { width:160px; margin:20px 0; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) { 
+			.bcs-app-form { padding:20px; text-align:center; }
+				.bcs-app-icon { margin:20px auto; }
+				.bcs-app-description { margin:0 auto; }
+				.bcs-app-form form { float:none; margin:20px auto; max-width:300px; }
+				.bcs-app-store { margin:20px auto; }
+				.bcs-social { margin:0 -20px; text-align:center; }
+				.bcs-social-overlay { margin:0 10px 20px 10px; width:24px;transition:none; -moz-transition:none; -webkit-transition:none; }
+					.bcs-social-overlay:hover { width:120px; }
+					.bcs-social-overlay:hover .bcs-overlay-graphic { top:35px; }
+		}
+		
