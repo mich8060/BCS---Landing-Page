@@ -22,6 +22,7 @@ body { margin:0; padding:0; height:2000px; }
 	@media only screen and (min-width: 0px) and (max-width: 600px) {
 		.bcs-lead-1 { font-size:36px; line-height:32px; }
 		.bcs-lead-2 { line-height:24px; }
+		.bcs-lead-3 { font-size:20px; line-height:20px; }
 	}
 	
 /* Unique Page Inputs */
@@ -52,14 +53,18 @@ body { margin:0; padding:0; height:2000px; }
 		.bcs-app-intro-container { }
 			a.bcs-app-button { background:#39C; color:#fff; display:inline-block; font-size:24px; font-weight:bold; line-height:45px; margin:10px 0; padding:0 20px; }
 		@media only screen and (min-width: 0px) and (max-width: 600px) { 
-			.bcs-app-intro {  height:300px; font-size:16px; line-height:20px; width:100%; }
+			.bcs-app-intro {  height:320px; font-size:16px; line-height:20px; width:100%; }
 		}
 
 	.bcs-app-device { width:50%; }
+		.ipad-only { display:none; }
+		img.bcs-app-ipad-device { left:50%; margin:8px 0 0 -225px; position:absolute; top:60px; width:450px; }
 		img.bcs-app-iphone-device { left:50%; margin:8px 0 0 -225px; position:absolute; width:450px; }
 		.bcs-app-iphone-video { background:#ccc; -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px; left:50%; height:450px; margin:0 0 0 -124px; overflow:hidden; position:absolute; top:152px; width:256px; }
-		.bcs-app-iphone-video img { height:453px; width:255px; }
-		.bcs-app-iphone-video video { height:453px; width:255px; }
+			.ipad-slideshow, .iphone-slideshow { position:absolute; }
+		.bcs-app-ipad-video img { height:453px; width:255px; }
+		.bcs-app-ipad-video { background:#ccc; -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px; left:50%; height:477px; margin:0 0 0 -180px; overflow:hidden; position:absolute; top:123px; width:360px; }
+		.bcs-app-ipad-video img { height:477px; width:360px; }
 		@media only screen and (min-width: 0px) and (max-width: 600px) { 
 			.bcs-app-device { width:100%; }
 			img.bcs-app-iphone-device { margin:8px auto 0; position:static; width:320px; }
@@ -77,8 +82,8 @@ body { margin:0; padding:0; height:2000px; }
 			.bcs-app-features { background-size:720px 152px; border-top:solid 1px #ededed; height:auto; padding:20px 0 130px 0; text-align:center; }
 			.bcs-app-feature-list-content { margin:20px; }
 			.bcs-app-feature-list-content ul { margin:20px 40px; }
-			.bcs-app-feature-list-content li { font-size:18px; margin:20px auto;  }
-			img.bcs-app-checkmark { display:none; float:left; margin:0 5px 25px 0; top:3px; width:15px; }
+			.bcs-app-feature-list-content li { font-size:18px; margin:20px auto; text-align:left;  }
+			img.bcs-app-checkmark { float:left; margin:0 10px 25px 0; top:0px; width:15px; }
 		}
 	
 	.bcs-app-featured { background:#222; color:#fff; clear:both; padding:80px 0 0 0; text-align:center; }
@@ -86,7 +91,9 @@ body { margin:0; padding:0; height:2000px; }
 			.bcs-app-card { margin:40px 10px 0 10px; }
 			.bcs-app-card-content { font-size:16px; padding:10px 40px 0 40px; }
 			.bcs-app-card-content .bcs-lead-3 { margin:20px 0; }
-		@media only screen and (min-width: 0px) and (max-width: 600px) {
+			.bcs-app-card-content p { height:120px; }
+		@media only screen and (min-width: 0px) and (max-width: 600px) {	
+			.bcs-app-card-content p { height:100px; }
 			.bcs-app-featured { height:auto; overflow:hidden; padding:40px 0 450px 0; }	
 			.bcs-app-featured .bcs-lead-1 { margin:10px 40px; }
 			.bcs-app-featured-card { background:#222; position:absolute; right:0px; left:0px; margin:0 auto; width:320px; }

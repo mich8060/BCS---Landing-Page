@@ -8,11 +8,48 @@ $(document).ready(function(){
 		cycle: null
 	}
 	
+	$.fn.cycleFeatures = function(obj){
+		// Reverse DOM arrangement
+		$(obj).each(function(){$(this).parent().prepend($(this));});
+
+		defaults.cycle = window.setInterval(function(){
+			console.log('here');
+			$el = $(obj);
+			$item = $el.last();
+			$item.animate({
+				opacity: 0
+			},500, function(){
+				$el.parent().prepend($item);
+				$item.css('opacity','1');
+			});
+		},5000);
+
+	}
+	
+	if(window.location.hash == "#ipad"){
+		defaults.device = "iPad";
+	}
+	
+	
 	// Detect iPhone & iPad Specifically
 	if(navigator.userAgent.match(/iPad/i)) {
 		defaults.device = "iPad";
 	}else if(navigator.userAgent.match(/iPhone/i)){
 		defaults.device = "iPhone";
+	}
+	
+	// Device Specific Actions
+	if(defaults.device == "iPad"){
+		$('.iphone-only').hide();
+		$('.ipad-only').show();
+		$(this).cycleFeatures('.ipad-slideshow');
+		$(".bcs-app-features").css("background-image","url('img/backcountry-app-pad-basics.jpg')");
+		$('.bcs-app-tabs a').removeClass();
+		$('.bcs-app-tabs a').eq(1).addClass('selected');
+		$(".bcs-preview").hide();
+		$(".bcs-app-ipad-preview").show();
+	}else{
+		$(this).cycleFeatures('.iphone-slideshow');
 	}
 		
 	$.fn.validatePhone = function(phone){
@@ -49,38 +86,10 @@ $(document).ready(function(){
       	});
 	}
 	
-	$.fn.cycleFeatures = function(obj){
-		// Reverse DOM arrangement
-		$(this).each(function(){$(this).parent().prepend($(this));})
-		defaults.cycle = window.setInterval(function(){
-			$el = $(obj);
-			$el.last().fadeOut('slow', function(){
-				$(obj).parent().prepend($el.last());
-				$el.last().show();
-			});
-		},5000);
-	}
-	
 	if($(window).width() <= 600){
 		$(this).cycleFeatures('.bcs-app-featured-card');	
 	}
 	
-	$(this).cycleFeatures('.bcs-app-iphone-video img');
-	
-	$.fn.lazyLoad = function(){
-		var settings = {
-			total: 	$(this).length,
-			data: [],
-	    	limit: 	100,
-	    	pause: 	10,
-			done: 	0,
-			step: 	0
-		}
-		
-		$(this).each(function(){
-			settings.data.push($(this));
-		});
-	}
 	
 	// Event That Creates Parallax Effect
 	$(window).scroll(function(){
@@ -157,25 +166,7 @@ $(document).ready(function(){
 		$(".bcs-preview").hide();
 		$("."+$data).show();
 		e.preventDefault();
-	});
-	
-	$(window).load(function(){
-		$('img').lazyLoad();
-	});
-	
-	
-	// Video Player
-	$('.bcs-app-iphone-video img').click(function(e){
-		$(this).hide();
-		$('.videoPlayer')[0].play();
-		e.preventDefault();
-	});
-	
-	$('.videoPlayer').bind('ended', function(){
-		$('.bcs-app-iphone-video img').show();
-	});
-	
-	$('.bcs-app-social iframe').css('margin','0 auto');
+	});	
 	
 	
 });
